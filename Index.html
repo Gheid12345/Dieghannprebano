@@ -21,10 +21,10 @@
     button{
         height: 50px;
         background-color: white;
-        border: 1px solid lightgray;
+        border: 1px solid rgb(184, 182, 182);
     }
     button.operator{
-        background-color: darkgray;
+        background-color: rgb(223, 220, 220);
     }
 </style>
 <div id="app"></div>
@@ -73,45 +73,43 @@
 //===============================================================================================
 //React callback function
 
-// for the onClick event
-function handleNumber(){
-    alert('you clicked a number!');
 
-}
+
+
 // parent component
-function Calculator(){ 
+function Calculator(){
 
-// for the onClick event
-function handleNumber(value){
-   // alert(value );
-   let newValue = value;
-
-   if(!calc.isInitial){
-        newvalue = calc.current + value;
-   }
-    setCalc ({current: newValue});
-
-}
+    // for the onClick event
+ function handleNumber(value){
+    // alert('value');
+    let newValue = value;
+    
+    if(!calc.isInitial){
+        newValue = calc.current + value;
+    }
+    setCalc({current: newValue, isInitial: false});
+ }
 
     // const [display, setDisplay] = React.useState('0');
 
-     //useState
-      const [calc, setCalc] = React.useState ({
-       current: '0',
-       total: '',
-       isInitial: true,
-       preOp: ''
-    });
+     // useState
+     
+ const [calc, setCalc] = React.useState({
+    current: '0',
+    total: '',
+    isInitial: true,
+    preOp: ''
+ });
 
-    //handle clear button
-    function handleClear (){
+ // handle clear button
+  function handleClear(){
     setCalc({
-        current: '0',
-       total: '',
-       isInitial: true,
-       preOp: ''
+    current: '0',
+    total: '',
+    isInitial: true,
+    preOp: ''
     });
-    }
+  }
 
     return(
         <div className="calculator">
