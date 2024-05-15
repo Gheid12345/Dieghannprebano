@@ -122,10 +122,9 @@ function handleOperator(value){
     });
 }
 
-
-  // for calculation function
+// for calculation function
 function doCalculation(){
-    let total = parseFloat"calc.total";
+    let total = parseFloat(calc.total);
     switch(calc.preOp){
         case '*':
             total *= parseFloat(calc.current); //equivalent to total = tolal * parseFloat(calc.current)
@@ -145,7 +144,6 @@ function doCalculation(){
     return total;
 }
 
-  
 
     return(
         <div className="calculator">
