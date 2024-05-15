@@ -105,12 +105,12 @@ function handleNumber(value){
 
     //handle clear button
     function handleClear (){
-        setCalc(
+    setCalc({
         current: '0',
        total: '',
        isInitial: true,
        preOp: ''
-    })
+    });
     }
 
     return(
